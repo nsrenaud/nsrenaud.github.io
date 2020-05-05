@@ -8,16 +8,81 @@
 
         <div class="grid_parent">
 
-            <section class="header">
-                <button class="btn main"><a href="toast-main.html">TOAST</a></button>
-                <button class="btn contact"><a href="toast-contact.html">CONTACT</a></button>
-                <button class="btn music"><a href="toast-music.html">MUSIC</a></button>
-                <button class="btn gallery"><a href="toast-gallery.html">GALLERY</a></button>
+           <section class="header">
+               <button class="btn main"><a class="main" href="toast-main.html">TOAST</a></button>
+                <button class="btn main"><a class="main" href="toast-contact.html">CONTACT</a></button>
+                <button class="btn main"><a class="main" href="toast-music.html">MUSIC</a></button>
+                <button class="btn select"><a class="select" href="toast-gallery.html">GALLERY</a></button>
             </section>
 
             <section class="left-sidebar"></section>
 
             <section class="main-content">
+                 <div id="title-button"><p class="title"><strong>LEWKS</strong></p> </div>
+                
+                
+                <!-- Container for the image gallery -->
+<div class="container2">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="toast-image1.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="toast-image2.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="toast-image3.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="toast-image4.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="toast-image5.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="toast-image6.png" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="toast-image1.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="toast-image2.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="toast-image3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="toast-image4.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="toast-image5.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="toast-image6.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+            
 
             
 
@@ -46,6 +111,37 @@
                     {
                     }
                 ) ;
+                var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+                
 
             </script>
 

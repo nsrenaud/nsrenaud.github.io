@@ -2,17 +2,27 @@ body {
     margin: 0px ;
 }
 .splash{
-        background-image: url("toastpurp.png");
+        /** background-image: url("background.png"); *//
+    background-color:white;
 
 }
 
 .two{
-    background-image: url(toastb.png)
+    background-image: url(toastb.png);
+}
+
+.contact{
+    background-image: url();
 }
 
 a{ 
     text-decoration: none;
     color: white;
+    outline-color: black
+}
+a:hover{ 
+    text-decoration: none;
+    color: black;
 }
 
 .grid_parent {
@@ -25,6 +35,7 @@ a{
         "header header header"
         "left-sidebar main-content right-sidebar"
         "left-sidebar main-content right-sidebar"
+         "left-sidebar main-content right-sidebar"
         "footer footer footer"
 }
 
@@ -34,11 +45,12 @@ a{
     color:white;
     grid-area: header ;
     text-align:center;
-    padding: 20px;
+    padding: 5px;
     word-spacing: 100px;
     letter-spacing: 5px;
     position: fixed ;
     width: 100% ;
+    z-index: 9;
 
 }
 
@@ -57,7 +69,8 @@ a{
 .right-sidebar {
     background-color: white;
     grid-area: right-sidebar ;
-    height: 1000px;
+        height: 100px;
+
 }
 
 .footer {
@@ -70,7 +83,7 @@ a{
 
 }
 .footer:hover {
-    color:pink;
+    color:#FDC0E6;
 }
 
 .links{
@@ -79,11 +92,27 @@ a{
 
 }
 
+.link{
+    text-align: center;
+    font-family: Avenir;
+background-color: white;
+    color: #FDC0E6;
+}
+
+.qween{
+    font-family: Avenir-black;
+    font-size: 60px;
+    color: #FDC0E6;
+    margin-top:150px;
+    margin-bottom:0px;
+}
 .toast{
     font-family: Futura;
     text-align: center;
     font-size: 200px;
     color:black;
+    margin-bottom:0px;
+    margin-top: 0px;
 }
 
 
@@ -100,10 +129,10 @@ a{
     color:white;
     font-family: Avenir ;
     padding-top: 0px;
-    padding-left: 50px;
-    padding-right: 40px;
-    padding-bottom:30px;
-
+    padding-left: 350px;
+    padding-right: 50px;
+    padding-bottom:20px;
+margin-bottom: 0px;
 
 }
 
@@ -111,9 +140,11 @@ a{
     text-align:left;
     color:white;
     font-family: Avenir-Black ;
-    padding-top: 10px;
-    padding-left: 50px;
-    font-size:50px;
+    padding-top: 0px;
+    padding-left: 350px;
+    font-size:80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 
 
 }
@@ -125,49 +156,59 @@ a{
     padding-top: 0px;
     padding-left: 500px;
     padding-right: 40px;
-    padding-bottom:30px;
+    font-size: 15px;
 
 
 }
 
 .update-heading{
     text-align:left;
-    color:white;
+    color:#FDC0E6;
     font-family: Avenir-Black ;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-left: 500px;
-    font-size:50px;
+    padding-right: 35px;
+    font-size:30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 
 
 }
+
+/*buttons */
+
 .btn {
     background-color: black;
     padding: 14px 28px;
     font-size: 14px;
     cursor: pointer;
     border-radius: 5px;
-   
+    border-width: 0px;
+    border-style: solid;
 
 }
 
 .main {
-    color: white;
     margin-left: 2px;
+    letter-spacing: 2px;
 }
 
 .main:hover {
-    background: white;
+    background: #FDC0E6;
     color: black;
 }
 
-.contact {
-    color: white;
+.select {
+    background-color:black;
+    color: #FDC0E6;
+    letter-spacing: 2px;
 }
 
-.contact:hover {
-    background: white;
-    color: black;
+.select:hover {
+    color:#FDC0E6;
+    background-color: black;
 }
+
 
 .music{
     color: white;
@@ -188,11 +229,12 @@ a{
 }
 
 .white {
-    border-color: white;
+    border-color: black;
     padding: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    margin-top: 50px;
     margin-bottom:10px;
-    padding-left: 80px;
+    margin-left: 500px;
     background-color: black;
     color: white;
     padding: 12px 20px;
@@ -203,18 +245,28 @@ a{
     align-items: center;
     justify-content:center;
     display: flex;
+    border: 1px solid white;
 }
+
+
 
 .white:hover {
     background-color: white; 
     color: black;
 }
 
-.pink{
-    background-color:pink;
+
+#pink {
+  background-image: url(toast-pink.png);
+    padding:30px;
+    margin-top: 200px;
+    margin-bottom:50px;  
     padding-bottom:50px;
-    margin-top: 400px;
-    margin-bottom: 100px;
+}
+
+}
+    
+
 }
 
 .black{
@@ -228,9 +280,10 @@ a{
 
 #black {
   background-image: url(toast-musicpic.png);
-    width: 100%;
-    padding:20px;
-    margin-bottom:200px;       
+    padding:60px;
+    margin-top: 50px;
+    margin-bottom:50px;  
+    padding-bottom:50px;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
@@ -239,46 +292,68 @@ a{
      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
 }
+
+#red {
+  background-image: url(toast-redblack.png);
+    padding:60px;
+    margin-top: 50px;
+    margin-bottom:100px;  
+    padding-bottom:50px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+#red:hover{
+     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
 }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: black;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+#blue {
+  background-image: url(toast-blueblack.png);
+    padding:60px;
+    margin-top: 50px;
+    margin-bottom:100px;  
+    padding-bottom:50px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: white;
-    color: black;
+#blue:hover{
+     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
 }
 
-/* Add a background color and some padding around the form */
-.container {
-    border-radius: 0px;
-    background-color: pink;
-    padding: 20px;
-    margin-top:100px;
+#yellow {
+  background-image: url(toast-yellowblack.png);
+    padding:60px;
+    margin-top: 50px;
+    margin-bottom:100px;  
+    padding-bottom:40px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+#yellow:hover{
+     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
 }
 
 label{
-    font-family: Futura;
+    font-family: Avenir-black;
+     text-align: center;
+    align-items: center;
+    justify-content:center;
+    font-size: 14px;
+    
+}
+
+.label{
+    font-family: Avenir-black;
+     text-align: center;
+    align-items: center;
+    justify-content:center;
+    font-size: 14px;
+    
 }
 
 /*for buttons under titles*/
@@ -289,8 +364,8 @@ label{
     padding-bottom: 20px;
     margin-bottom:10px;
     margin-top: 40px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -298,8 +373,28 @@ label{
 }
 
 .under-title:hover {
-    background-color: pink; 
+    background-color: #FDC0E6; 
+    color: white;
+    text-align: center;
+}
+
+.under-title2 {
+    border-color: white;
+    padding: 20px;
+    padding-bottom: 20px;
+    margin-bottom:10px;
+    margin-top: 40px;
+    background-color: ;
     color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.under-title2:hover {
+    background-color: #FDC0E6; 
+    color: white;
     text-align: center;
 }
 
@@ -307,10 +402,190 @@ label{
     text-align: center;
     align-items: center;
     justify-content:center;
-    margin-top: 200px;
-    margin-bottom: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     font-size: 50px;
 }
+
+button{
+    padding-left: 350px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+button:hover{
+ background-color: white;
+    color: black;
+    
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  font-family: Avenir;
+    font-size: 14px;
+padding: 10px; /* Some padding */ 
+  border: 1px solid #FDC0E6; /* Gray border */
+  border-radius: 0px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+ 
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+    font-family: Avenir;
+    font-size: 14px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: white;
+    color:black;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 0px;
+  background-color: #FDC0E6;
+  padding: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container2 {
+  position: relative;
+margin-bottom: 100px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.mySlides:hover{
+     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #FDC0E6;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: white;
+      font-family: Avenir-black;
+  font-size: 14px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.column:hover{
+     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

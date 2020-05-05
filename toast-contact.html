@@ -4,36 +4,37 @@
         <link href="toast.css" type="text/css" rel="stylesheet"> 
     </head>
 
-    <body>
+    <body class="contact">
         <div class="grid_parent">
 
             <section class="header">
-                <button class="btn main"><a href="toast-main.html">TOAST</a></button>
-                <button class="btn contact"><a href="toast-contact.html">CONTACT</a></button>
-                <button class="btn music"><a href="toast-music.html">MUSIC</a></button>
-                <button class="btn gallery"><a href="toast-gallery.html">GALLERY</a></button>
+               <button class="btn main"><a class="main" href="toast-main.html">TOAST</a></button>
+                <button class="btn select"><a class="select" href="toast-contact.html">CONTACT</a></button>
+                <button class="btn main"><a class="main" href="toast-music.html">MUSIC</a></button>
+                <button class="btn main"><a class="main" href="toast-gallery.html">GALLERY</a></button>
             </section>
 
             <section class="left-sidebar"></section>
 
             <section class="main-content">
+                 <div id="title-button"><p class="title"><strong>LET'S CHAT</strong></p>
+                </div>
+  
+               <div class="container">
+  <form action="action_page.php">
 
+    <label for="fname">FIRST NAME</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-                <div class="container">
-                    <form action="action_page.php">
+    <label for="lname">LAST NAME</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-                        <label for="fname"><strong>FIRST NAME</strong></label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <label for="subject">SUBJECT</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-                        <label for="lname"><strong>LAST NAME</strong></label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input type="submit" value="Submit">
 
-                        <label for="subject"><strong>SUBJECT</strong></label>
-                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-                        <input type="submit" value="Submit">
-
-                    </form>
+  </form>
                 </div>
 
             </section>
